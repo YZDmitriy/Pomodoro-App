@@ -1,17 +1,19 @@
+import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import Backdrop from './Backdrop';
 import ModelContainer from './ModelContainer';
 
-function Model({ isOpen }) {
+function Model({ isOpen, onClose }) {
   return (
     <>
-      {isOpen &
-      (
-        <>
-          <Backdrop />
-          <ModelContainer />
-        </>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <Backdrop />
+            <ModelContainer isOpen={isOpen} onClose={onClose} />
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }
