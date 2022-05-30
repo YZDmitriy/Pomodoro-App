@@ -1,9 +1,9 @@
 ### POMODORO
 ## Timer for those who value their time
 
-![first]()
+![first](https://github.com/YZDmitriy/Pomodoro-App/blob/master/public/image/pomodoro1.png)
 
-![second]()
+![second](https://github.com/YZDmitriy/Pomodoro-App/blob/master/public/image/pomodoro2.png)
 
 Чтобы запустить, необходимо в корневой папке запустить 2 команды:
 
