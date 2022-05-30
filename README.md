@@ -1,5 +1,5 @@
-### POMODORO
-## Timer for those who value their time
+## POMODORO
+### Timer for those who value their time
 
 ![first](https://github.com/YZDmitriy/Pomodoro-App/blob/master/public/image/pomodoro1.png)
 
