@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import Tags from './components/Tags/Tags';
+import Timer from './components/Timer/Timer';
 
 function App() {
   return (
     <>
       <Title>POMODORO</Title>
       <Tags/>
+      <Timer/>
     </>
   );
 }
