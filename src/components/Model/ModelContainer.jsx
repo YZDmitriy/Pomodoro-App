@@ -18,9 +18,19 @@ function ModelContainer(props) {
 export default ModelContainer;
 
 const Container = styled.div`
-position: absolute;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  z-index: 150;
 `;
-const ModelContent = styled.div``;
+const ModelContent = styled.div`
+  width: 60rem;
+  height: 40rem;
+  background-color: white;
+
+`;
 const ModalHeader = styled.div``;
 const ModalTitle = styled.div``;
 const ModalCloseButton = styled.button``;

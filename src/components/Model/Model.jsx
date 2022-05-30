@@ -2,12 +2,17 @@ import React from 'react';
 import Backdrop from './Backdrop';
 import ModelContainer from './ModelContainer';
 
-function Model(props) {
+function Model({ isOpen }) {
   return (
-    <div>
-      <Backdrop/>
-      <ModelContainer/>
-    </div>
+    <>
+      {isOpen &
+      (
+        <>
+          <Backdrop />
+          <ModelContainer />
+        </>
+      )}
+    </>
   );
 }
 
