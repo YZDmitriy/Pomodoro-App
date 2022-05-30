@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import StateProvider from './StateProvider';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -26,18 +27,18 @@ const theme = {
   colors: {
     primary: '#b85600',
     secondary: '#08002b',
-    bg: '#220045'
+    bg: '#220045',
   },
 };
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <ThemeProvider theme={theme}>
-   <GlobalStyle />
-    <App />
-   </ThemeProvider>
+    <StateProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </StateProvider>
   </React.StrictMode>
 );

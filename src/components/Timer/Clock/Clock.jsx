@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
+import { StateContext } from '../../../StateProvider';
 
 function Clock(props) {
-  const [time, setTime] = useState(500);
-  const [isActive, setIsActive] = useState(false);
+  const { time, setTime, isActive, setIsActive } = useContext(StateContext);
 
   useEffect(() => {
     if (isActive && time > 0) {
@@ -31,6 +31,7 @@ function Clock(props) {
       <StartPauseButton onClick={toggleClock}>
         {isActive ? 'Pause' : 'Start'}
       </StartPauseButton>
+      { time === 0 && <ResetButton>RESET</ResetButton>}
     </ClockContainer>
   );
 }
@@ -52,4 +53,8 @@ const StartPauseButton = styled.button`
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
+`;
+
+const ResetButton = styled(StartPauseButton)`
+  color: red;
 `;
