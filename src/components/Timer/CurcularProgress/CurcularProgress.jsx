@@ -1,15 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { StateContext } from '../../../StateProvider';
 import Clock from '../Clock/Clock';
 
 function CurcularProgress(props) {
-  const {progress, setProrgess} = useContext(StateContext);
+  const { progress, setProrgess, time, initTime } = useContext(StateContext);
+
+  useEffect(() => {
+    setProrgess(time / (initTime / 100));
+  }, [setProrgess, time]);
 
   return (
     <OuterCircle progress={progress}>
       <InnerCircle>
-        <Clock/>
+        <Clock />
       </InnerCircle>
     </OuterCircle>
   );

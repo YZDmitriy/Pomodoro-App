@@ -5,7 +5,7 @@ export const StateContext = createContext();
 
 function StateProvider({ children }) {
   const [workTime, setWorkTime] = useState(25 * 60);
-  const [shortBreakTime, setShortBreakTime] = useState(5 * 60);
+  const [shortBreakTime, setShortBreakTime] = useState(5);
   const [longBreakTime, setLongBreakTime] = useState(30 * 60);
 
   const [initTime, setInitTime] = useState(0);
@@ -43,6 +43,14 @@ function StateProvider({ children }) {
         setTime,
         isActive,
         setIsActive,
+        initTime,
+        setInitTime,
+        workTime,
+        setWorkTime,
+        shortBreakTime,
+        setShortBreakTime,
+        longBreakTime,
+        setLongBreakTime
       }}
     >
       {children}
